@@ -16,17 +16,14 @@ import "./root.css";
 
 export default function Root() {
   return (
-<html>
-	<head>
-		<base href="http://go.pardot.com" >
-		<meta charset="utf-8"/>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="description" content="%%description%%"/>
-		<title>%%title%%</title>
-		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	</head>
-	
-	<body style="background-color: #4b534f">
+    <Html lang="en">
+      <Head>
+        <Title>SolidStart - Bare</Title>
+        <Meta charset="utf-8" />
+        <Meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Body>
+	      <div style="background-color: #4b534f">
  <style>
 	    body form.form {
     width:100%;
@@ -151,7 +148,18 @@ body form.form p.submit {
      </div>
     </div>
 
-  </body>
-</html>
+  </div>
+        <Suspense>
+          <ErrorBoundary>
+            <A href="/">Index</A>
+            <A href="/about">About</A>
+            <Routes>
+              <FileRoutes />
+            </Routes>
+          </ErrorBoundary>
+        </Suspense>
+        <Scripts />
+      </Body>
+    </Html>
   );
 }
