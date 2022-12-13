@@ -16,7 +16,6 @@ import "./root.css";
 
 export default function Root() {
   return (
-    <!DOCTYPE html>
 <html>
 	<head>
 		<base href="http://go.pardot.com" >
